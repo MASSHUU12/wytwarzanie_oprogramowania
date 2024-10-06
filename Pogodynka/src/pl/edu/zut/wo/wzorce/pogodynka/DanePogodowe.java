@@ -1,45 +1,43 @@
 package pl.edu.zut.wo.wzorce.pogodynka;
 
-import java.io.BufferedWriter;
-
-import pl.edu.zut.wo.wzorce.pogodynka.wyświetl.PrognozaWyświetlanie;
-import pl.edu.zut.wo.wzorce.pogodynka.wyświetl.StatystykaWyświetlanie;
-import pl.edu.zut.wo.wzorce.pogodynka.wyświetl.WarunkiBieżąceWyświetlanie;
+import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.PrognozaWyswietlanie;
+import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.StatystykaWyswietlanie;
+import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.WarunkiBiezaceWyswietlanie;
 
 public class DanePogodowe {
     private float temperatura;
-    private float wilgotność;
-    private float ciśnienie;
+    private float wilgotnosc;
+    private float cisnienie;
 
-    private PrognozaWyświetlanie prognozaWyświetl = new PrognozaWyświetlanie();
-    private WarunkiBieżąceWyświetlanie warunkiBieżąceWyświetl = new WarunkiBieżąceWyświetlanie();
-    private StatystykaWyświetlanie statystykaWyświetl = new StatystykaWyświetlanie();
+    private PrognozaWyswietlanie prognozaWyswietl = new PrognozaWyswietlanie();
+    private WarunkiBiezaceWyswietlanie warunkiBiezaceWyswietl = new WarunkiBiezaceWyswietlanie();
+    private StatystykaWyswietlanie statystykaWyswietl = new StatystykaWyswietlanie();
 
     public void odczytyZmiana() {
         float temp = pobierzTemperaturę();
-        float wilgotność = pobierzWilgotność();
-        float ciśnienie = pobierzCiśnienie();
-        warunkiBieżąceWyświetl.aktualizacja(temp, wilgotność, ciśnienie);
-        statystykaWyświetl.aktualizacja(temp, wilgotność, ciśnienie);
-        prognozaWyświetl.aktualizacja(temp, wilgotność, ciśnienie);
+        float wilgotnosc = pobierzWilgotnosc();
+        float cisnienie = pobierzCisnienie();
+        warunkiBiezaceWyswietl.aktualizacja(temp, wilgotnosc, cisnienie);
+        statystykaWyswietl.aktualizacja(temp, wilgotnosc, cisnienie);
+        prognozaWyswietl.aktualizacja(temp, wilgotnosc, cisnienie);
     }
 
     private float pobierzTemperaturę() {
         return temperatura;
     }
 
-    private float pobierzWilgotność() {
-        return wilgotność;
+    private float pobierzWilgotnosc() {
+        return wilgotnosc;
     }
 
-    private float pobierzCiśnienie() {
-        return ciśnienie;
+    private float pobierzCisnienie() {
+        return cisnienie;
     }
 
-    public void ustawOdczyty(float temperatura, float wilgotność, float ciśnienie) {
+    public void ustawOdczyty(float temperatura, float wilgotnosc, float cisnienie) {
         this.temperatura = temperatura;
-        this.wilgotność = wilgotność;
-        this.ciśnienie = ciśnienie;
+        this.wilgotnosc = wilgotnosc;
+        this.cisnienie = cisnienie;
         odczytyZmiana();
     }
 

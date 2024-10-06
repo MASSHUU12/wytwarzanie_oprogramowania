@@ -1,5 +1,5 @@
-package pl.edu.zut.wo.wzorce.pogodynka.wyświetl;
+package pl.edu.zut.wo.wzorce.pogodynka.wyswietl;
 
 public interface WyswietlElement {
-    public void wyswietl();
+    void wyswietl();
 }

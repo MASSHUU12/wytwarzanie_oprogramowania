@@ -16,6 +16,10 @@ public class WarunkiBiezaceWyswietlanie implements Obserwator, WyswietlElement {
     }
 
     public void wyswietl() {
-        System.out.println("Warunki bieżące " + temperatura + " stopni C oraz " + wilgotnosc + "% wilgotnosc");
+        System.out.println(
+                "Warunki biezace " + temperatura + " stopni, "
+                        + wilgotnosc + "% wilgotnosc, "
+                        + cisnienie + " hPa"
+        );
     }
 }

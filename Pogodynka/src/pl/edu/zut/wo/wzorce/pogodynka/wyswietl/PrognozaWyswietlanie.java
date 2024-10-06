@@ -16,6 +16,10 @@ public class PrognozaWyswietlanie implements Obserwator, WyswietlElement {
     }
 
     public void wyswietl() {
-        System.out.println("Prognoza " + temperatura + " stopni C oraz " + wilgotnosc + "% wilgotnosc");
+        System.out.println(
+                "Prognoza " + temperatura + " stopni, "
+                        + wilgotnosc + "% wilgotnosc, "
+                        + cisnienie + " hPa"
+        );
     }
 }

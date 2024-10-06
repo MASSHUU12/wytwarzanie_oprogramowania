@@ -16,6 +16,10 @@ public class StatystykaWyswietlanie implements Obserwator, WyswietlElement {
     }
 
     public void wyswietl() {
-        System.out.println("Staystyka " + temperatura + " stopni C oraz " + wilgotnosc + "% wilgotnosc");
+        System.out.println(
+                "Statystyka " + temperatura + " stopni, "
+                        + wilgotnosc + "% wilgotnosc, "
+                        + cisnienie + " hPa"
+        );
     }
 }

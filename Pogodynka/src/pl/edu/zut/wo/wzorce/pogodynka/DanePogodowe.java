@@ -8,7 +8,7 @@ import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.WarunkiBiezaceWyswietlanie;
 import java.util.ArrayList;
 
 public class DanePogodowe implements Podmiot {
-    private ArrayList<Obserwator> obserwatorzy = new ArrayList<>();
+    private final ArrayList<Obserwator> obserwatorzy = new ArrayList<>();
     private float temperatura;
     private float wilgotnosc;
     private float cisnienie;

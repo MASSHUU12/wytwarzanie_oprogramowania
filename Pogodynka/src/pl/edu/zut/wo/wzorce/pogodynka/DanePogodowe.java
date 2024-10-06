@@ -1,5 +1,6 @@
 package pl.edu.zut.wo.wzorce.pogodynka;
 
+import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.HeatIndexDisplay;
 import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.PrognozaWyswietlanie;
 import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.StatystykaWyswietlanie;
 import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.WarunkiBiezaceWyswietlanie;
@@ -16,6 +17,7 @@ public class DanePogodowe implements Podmiot {
         zarejestrujObserwatora(new PrognozaWyswietlanie());
         zarejestrujObserwatora(new StatystykaWyswietlanie());
         zarejestrujObserwatora(new WarunkiBiezaceWyswietlanie());
+        zarejestrujObserwatora(new HeatIndexDisplay());
     }
 
     public void ustawOdczyty(float temperatura, float wilgotnosc, float cisnienie) {

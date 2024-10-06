@@ -1,6 +1,8 @@
 package pl.edu.zut.wo.wzorce.pogodynka.wyswietl;
 
-public class PrognozaWyswietlanie {
+import pl.edu.zut.wo.wzorce.pogodynka.Obserwator;
+
+public class StatystykaWyswietlanie implements Obserwator, WyswietlElement {
 
     private float temperatura;
     private float wilgotnosc;
@@ -14,7 +16,6 @@ public class PrognozaWyswietlanie {
     }
 
     public void wyswietl() {
-        System.out.println("Prognoza " + temperatura + " stopni C oraz " + wilgotnosc + "% wilgotnosc");
+        System.out.println("Staystyka " + temperatura + " stopni C oraz " + wilgotnosc + "% wilgotnosc");
     }
-
 }

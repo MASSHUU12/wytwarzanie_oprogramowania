@@ -4,10 +4,13 @@ import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.PrognozaWyswietlanie;
 import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.StatystykaWyswietlanie;
 import pl.edu.zut.wo.wzorce.pogodynka.wyswietl.WarunkiBiezaceWyswietlanie;
 
-public class DanePogodowe {
+import java.util.ArrayList;
+
+public class DanePogodowe implements Podmiot {
     private float temperatura;
     private float wilgotnosc;
     private float cisnienie;
+    private ArrayList<Obserwator> obserwatorzy = new ArrayList<>();
 
     private PrognozaWyswietlanie prognozaWyswietl = new PrognozaWyswietlanie();
     private WarunkiBiezaceWyswietlanie warunkiBiezaceWyswietl = new WarunkiBiezaceWyswietlanie();
@@ -41,4 +44,17 @@ public class DanePogodowe {
         odczytyZmiana();
     }
 
+    public void zarejestrujObserwatora(Obserwator o) {
+        obserwatorzy.add(o);
+    }
+
+    public void usunObserwatora(Obserwator o) {
+        obserwatorzy.remove(o);
+    }
+
+    public void powiadomObserwatorow() {
+        for (Obserwator o : obserwatorzy) {
+            o.aktualizacja(temperatura, wilgotnosc, cisnienie);
+        }
+    }
 }

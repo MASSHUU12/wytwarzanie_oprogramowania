@@ -5,7 +5,6 @@ import pl.edu.zut.wo.wzorce.fabryka_czekolady.CzekoladowyKocioł;
 public class Synchro extends CzekoladowyKocioł {
 	private static Synchro unikalnaInstancja;
 
-	// tutaj umieść inne użyteczne zmienne obiektowe
 	private Synchro() {
 		super();
 	}
@@ -16,24 +15,30 @@ public class Synchro extends CzekoladowyKocioł {
 		}
 		return unikalnaInstancja;
 	}
-	// tutaj umieść inne użyteczne metody
+
+
+	@Override
 	public synchronized void napełniaj() {
-		this.napełniaj();
+		super.napełniaj();
 	}
 
+	@Override
 	public synchronized void opróżniaj() {
-		this.opróżniaj();
+		super.opróżniaj();
 	}
 
+	@Override
 	public synchronized void gotuj() {
-		this.gotuj();
+		super.gotuj();
 	}
 
+	@Override
 	public synchronized boolean jestPusty() {
-		return this.jestPusty();
+		return super.jestPusty();
 	}
 
+	@Override
 	public synchronized boolean jestUgotowany() {
-		return this.jestUgotowany();
+		return super.jestUgotowany();
 	}
 }

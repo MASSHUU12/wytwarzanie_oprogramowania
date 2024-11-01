@@ -1,7 +1,8 @@
 package pl.edu.zut.wo.wzorce.fabryka_czekolady;
-
+import pl.edu.zut.wo.wzorce.fabryka_czekolady.CzekoladowyKocioł;
 import pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.eager.Eager;
 import pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.klasyczny.Klasyczny;
+import pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.synchro.Synchro;
 
 public class FabrykaCzekoladyWątki {
 
@@ -22,6 +23,7 @@ public class FabrykaCzekoladyWątki {
 
     private static void test(String name) {
         System.out.println("Uruchomione przez: " + name);
+
         CzekoladowyKocioł kocioł = new CzekoladowyKocioł();
         kocioł.napełniaj();
         kocioł.gotuj();
@@ -32,14 +34,24 @@ public class FabrykaCzekoladyWątki {
         klasyczny.gotuj();
         klasyczny.opróżniaj();
 
-//		Synchro synchro = Synchro.pobierzInstancję();
-//		synchro.napełniaj();
-//		synchro.gotuj();
-//		synchro.opróżniaj();
+        Synchro synchro = Synchro.pobierzInstancję();
+        synchro.napełniaj();
+        synchro.gotuj();
+        synchro.opróżniaj();
 
         Eager eager = Eager.pobierzInstancję();
         eager.napełniaj();
         eager.gotuj();
         eager.opróżniaj();
+
+        pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.double_lock.Singleton doubleLock =
+                pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.double_lock.Singleton.pobierzInstancję();
+        doubleLock.napełniaj();
+        doubleLock.gotuj();
+        doubleLock.opróżniaj();
+
+        pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.jbloch.Singleton.INSTANCE.napełniaj();
+        pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.jbloch.Singleton.INSTANCE.gotuj();
+        pl.edu.zut.wo.wzorce.fabryka_czekolady.singleton.jbloch.Singleton.INSTANCE.opróżniaj();
     }
 }

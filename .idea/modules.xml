@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FabrykaCzekolady/FabrykaCzekolady.iml" filepath="$PROJECT_DIR$/FabrykaCzekolady/FabrykaCzekolady.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pizzeria1/Pizzeria1.iml" filepath="$PROJECT_DIR$/Pizzeria1/Pizzeria1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pizzeria2/Pizzeria2.iml" filepath="$PROJECT_DIR$/Pizzeria2/Pizzeria2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pogodynka/Pogodynka.iml" filepath="$PROJECT_DIR$/Pogodynka/Pogodynka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StarCafe/StarCafe.iml" filepath="$PROJECT_DIR$/StarCafe/StarCafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SuperPilot/SuperPilot.iml" filepath="$PROJECT_DIR$/SuperPilot/SuperPilot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SymulatorKaczki/SymulatorKaczki.iml" filepath="$PROJECT_DIR$/SymulatorKaczki/SymulatorKaczki.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wytwarzanie_oprogramowania.iml" filepath="$PROJECT_DIR$/.idea/wytwarzanie_oprogramowania.iml" />
+    </modules>
+  </component>
+</project>

@@ -2,7 +2,7 @@ package pl.edu.zut.wo.wzorce.pilot.sterowniki;
 
 public class WieżaStereo {
 	String lokalizacja;
-
+	private String tryb;
 	public WieżaStereo(String location) {
 		this.lokalizacja = location;
 	}
@@ -32,4 +32,13 @@ public class WieżaStereo {
 		// valid range: 1-11 (after all 11 is better than 10, right?)
 		System.out.println(lokalizacja + " wieża stereo głośność ustawiona na " + głośność);
 	}
+	public void ustawTryb(String tryb) {
+		this.tryb = tryb;
+		System.out.println(lokalizacja + " wieża stereo ustawiona na tryb: " + tryb);
+	}
+
+	public String pobierzTryb() {
+		return tryb;
+	}
+
 }
